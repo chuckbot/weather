@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "migrate": "npx knex migrate:latest --knexfile src/db/knexfile.js",
     "start": "node src/index.js",
     "dev": "nodemon src/index.js"
   },
