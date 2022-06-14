@@ -32,7 +32,7 @@ export default function CityList() {
       {cities.map((city) => (
         <Card
           style={{
-            marginBottom: ".7rem",
+            margin: "1rem 0 .7rem 0",
             backgroundColor: "rgba(255,255,255, 0.2)",
           }}
           key={city.id}
