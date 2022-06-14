@@ -9,6 +9,10 @@ class CitiesService {
   getCity() {
     return citiesDAO.getCity();
   }
+
+  deleteCity(id) {
+    return citiesDAO.deleteCity(id);
+  }
 }
 
 module.exports = new CitiesService();

@@ -7,8 +7,6 @@ router.get("/cities", citiesController.getCity);
 
 router.post("/cities", citiesController.saveCity);
 
-router.delete("/cities", (req, res) => {
-  res.send("deleting a cities");
-});
+router.delete("/cities/:id", citiesController.deleteCity);
 
 module.exports = router;

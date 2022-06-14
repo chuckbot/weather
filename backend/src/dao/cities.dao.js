@@ -17,6 +17,11 @@ class CitiesDAO {
     const data = await db.select("*").from("city");
     return data;
   }
+
+  async deleteCity(id) {
+    const data = await db.table("city").where(id, id).delete();
+    return data;
+  }
 }
 
 module.exports = new CitiesDAO();
