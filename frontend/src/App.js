@@ -49,9 +49,7 @@ function App() {
             </div>
           </div>
         )}
-        <div className="bottom">
-          <CityList />
-        </div>
+        <CityList />
       </div>
     </div>
   );
