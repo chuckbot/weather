@@ -1,3 +1,4 @@
+const { db } = require("../config");
 // Update with your config settings.
 
 /**
@@ -7,9 +8,9 @@ module.exports = {
   development: {
     client: "postgresql",
     connection: {
-      database: "cities",
-      user: "postgres",
-      password: "password",
+      database: db.database,
+      user: db.user,
+      password: db.password,
     },
     pool: {
       min: 2,

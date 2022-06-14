@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import CityList from "./components/CityList";
 
 function App() {
   const [data, setData] = useState({});
@@ -48,6 +49,9 @@ function App() {
             </div>
           </div>
         )}
+        <div className="bottom">
+          <CityList />
+        </div>
       </div>
     </div>
   );
