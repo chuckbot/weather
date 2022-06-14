@@ -9,6 +9,11 @@ class CitiesController {
       console.error(error);
     }
   }
+
+  async getCity(req, res) {
+    const id = await citiesService.getCity();
+    res.status(200).json(id);
+  }
 }
 
 module.exports = new CitiesController();

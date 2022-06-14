@@ -3,9 +3,7 @@ const citiesController = require("../controllers/cities.controllers");
 
 const router = Router();
 
-router.get("/cities", (req, res) => {
-  res.send("listing cities");
-});
+router.get("/cities", citiesController.getCity);
 
 router.post("/cities", citiesController.saveCity);
 

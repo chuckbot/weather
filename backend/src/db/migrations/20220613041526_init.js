@@ -8,7 +8,7 @@ exports.up = function (knex) {
     table.string("city_name").notNullable();
     table.double("temp").notNullable();
     table.double("humidity").notNullable();
-    table.timestamp(true, true);
+    table.timestamps(true, true);
   });
 };
 
