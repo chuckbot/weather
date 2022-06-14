@@ -38,23 +38,38 @@ export default function CityList() {
           key={city.id}
         >
           <CardContent
-            style={{ display: "flex", justifyContent: "space-between" }}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              color: "#fff",
+            }}
           >
-            <div style={{ color: "#fff" }}>
-              <Typography>{city.city_name}</Typography>
-              <Typography>{city.temp}</Typography>
-              <Typography>{city.humidity}</Typography>
+            <div>
+              <Typography gutterBottom variant="h6" component="div">
+                City
+              </Typography>
+              <Typography variant="body2">{city.city_name}</Typography>
+            </div>
+            <div>
+              <Typography gutterBottom variant="h6" component="div">
+                Temperature
+              </Typography>
+              <Typography variant="body2">{city.temp}</Typography>
+            </div>
+            <div>
+              <Typography gutterBottom variant="h6" component="div">
+                Humidity
+              </Typography>
+              <Typography variant="body2">{city.humidity}</Typography>
             </div>
 
-            <div>
-              <Button
-                variant="contained"
-                color="warning"
-                onClick={() => handleDelete(city.id)}
-              >
-                Delete
-              </Button>
-            </div>
+            <Button
+              variant="contained"
+              color="warning"
+              onClick={() => handleDelete(city.id)}
+            >
+              Delete
+            </Button>
           </CardContent>
         </Card>
       ))}
